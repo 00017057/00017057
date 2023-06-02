@@ -3,7 +3,7 @@
 ## About the app
 This app offers the opportunity of tracking shopping list items for its' users.
 
-#### Instructions
+## Instructions
 1. Download the source code
 
 Clone the repository from github by running the following command:
@@ -39,10 +39,10 @@ npm i express pug
     2. Go to your browser and access the following link http://localhost:8000/
 
     3. Now you can use the app
-    
-#### Dependencies list
+
+## Dependencies list
 - express
 - pug
 
-#### Link to GitHub repository
-[https://github.com/00017057/00017057.git]
+## Link to GitHub repository
+**GitHub** - https://github.com/00017057/00017057.git
