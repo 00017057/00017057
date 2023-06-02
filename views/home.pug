@@ -5,7 +5,10 @@ block number1
         p.error Please fill the text area
 
     if success 
-        p.success Good job 
+        p.success Good job
+
+    if deleted
+        p.success Deleted
 
     form.form(action='/add' method='POST')
         input.input(type='text' placeholder='Add your shopping item...' name='shoppingitem')
@@ -14,6 +17,8 @@ block number1
     div.shpitems
         if shpitems.length
             each shpitem in shpitems
-                p.shpitem #{ shpitem.description }
+                p.shpitem 
+                    span #{ shpitem.description }
+                    a.delete(href=`/${ shpitem.id }/delete`) Delete
         else
             p.shpitem No any shopping item available

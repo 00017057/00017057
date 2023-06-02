@@ -62,6 +62,24 @@ app.post('/add', (req, res) => {
     }
 })
 
+app.get('/:id/delete', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./data/shpitems.json', (err, data) => {
+        if (err) throw err
+
+        const shpitems = JSON.parse(data)
+
+        const filteredShpitems = shpitems.filter(shpitem => shpitem.id != id)
+
+        fs.writeFile('./data/shpitems.json', JSON.stringify(filteredShpitems), (err) => {
+            if (err) throw err
+            
+            res.render('home', { shpitems: filteredShpitems, deleted: true })
+        })
+    })
+})
+
 app.listen(PORT, (err) => {
     if (err) throw err
 
