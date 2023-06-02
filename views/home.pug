@@ -18,7 +18,10 @@ block number1
         if shpitems.length
             each shpitem in shpitems
                 p.shpitem 
-                    span #{ shpitem.description }
+                    if shpitem.done
+                        a.done(href=`/${ shpitem.id }/update`) #{ shpitem.description }
+                    else 
+                        a.undone(href=`/${ shpitem.id }/update`) #{ shpitem.description }
                     a.delete(href=`/${ shpitem.id }/delete`) Delete
         else
             p.shpitem No any shopping item available

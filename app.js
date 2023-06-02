@@ -80,6 +80,32 @@ app.get('/:id/delete', (req, res) => {
     })
 })
 
+
+app.get('/:id/update', (req, res) => {
+    const id = req.params.id
+
+  fs.readFile('./data/shpitems.json', (err, data) => {
+    if (err) throw err
+
+    const shpitems = JSON.parse(data)
+    const shpitem = shpitems.filter(shpitem => shpitem.id == id)[0]
+    
+    const shpitemIdx = shpitems.indexOf(shpitem)
+    const splicedShpitem = shpitems.splice(shpitemIdx, 1)[0]
+    
+    splicedShpitem.done = true
+
+    shpitems.push(splicedShpitem)
+
+    fs.writeFile('./data/shpitems.json', JSON.stringify(shpitems), (err) => {
+        if (err) throw err
+
+        res.render('home', { shpitems: shpitems })
+    })
+  })  
+    
+})
+
 app.listen(PORT, (err) => {
     if (err) throw err
 
