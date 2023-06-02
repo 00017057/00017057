@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.logo {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input {
+    display: inline-block;
+    padding: 10px;
+    font-size: 1.5rem;
+    width: 80%;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    width: 18%;
+    border: none;
+    background: blue;
+    color: #fff;
+}
+
+.shpitems {
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.shpitem {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-bottom: 1px dotted #ccc;    
+}
+
+
+.shpitem:hover {
+    background: #eee;
+}

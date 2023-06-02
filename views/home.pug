@@ -1,0 +1,19 @@
+extends layout.pug
+
+block number1
+    if error
+        p Please fill the text area
+
+    if success 
+        p Good job 
+            
+    form.form(action='/add' method='POST')
+        input.input(type='text' placeholder='Add your shopping item...' name='shoppingitem')
+        button.btn Add
+
+    div.shpitems
+        if shpitems.length
+            each shpitem in shpitems
+                p.shpitem #{ shpitem.description }
+        else
+            p.shpitem No any shopping item available
