@@ -6,7 +6,7 @@ This app offers the opportunity of tracking shopping list items for its' users.
 1. Download the source code
 
 ```terminal
-git clone [url to the github repo]
+git clone [https://github.com/00017057/00017057.git]
 ```
 or just download the *.zip file
 
@@ -25,4 +25,4 @@ node app
 - pug
 
 #### Link to GitHub repository
-[url to the github repo]
+[https://github.com/00017057/00017057.git]
