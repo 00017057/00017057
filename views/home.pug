@@ -2,11 +2,11 @@ extends layout.pug
 
 block number1
     if error
-        p Please fill the text area
+        p.error Please fill the text area
 
     if success 
-        p Good job 
-            
+        p.success Good job 
+
     form.form(action='/add' method='POST')
         input.input(type='text' placeholder='Add your shopping item...' name='shoppingitem')
         button.btn Add

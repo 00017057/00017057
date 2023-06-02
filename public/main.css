@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: monospace;
+    background-color: antiquewhite;
 }
 
 .wrapper {
@@ -50,7 +52,28 @@
     border-bottom: 1px dotted #ccc;    
 }
 
+.shpitem:last-child {
+    border-bottom: none;
+}
 
 .shpitem:hover {
     background: #eee;
+}
+
+.error, .success {
+    text-align: center;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: red;
+    border-color: red;
+}
+
+.success {
+    color: green;
+    border-color: green;
 }
